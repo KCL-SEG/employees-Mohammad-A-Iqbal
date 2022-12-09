@@ -35,7 +35,7 @@ class Employee:
         return (self.base_pay + self.get_commission())
     
     def get_pay_statement(self):
-        return ' Their total pay is ' + str(self.get_pay()) + '.'
+        return 'Their total pay is ' + str(self.get_pay()) + '.'
          
     def __str__(self):
         return  str(self.name) + ' works on a ' + str(self.get_salary_statement()) + str(self.get_commission_statement) + '.' + str(self.get_pay_statement)
