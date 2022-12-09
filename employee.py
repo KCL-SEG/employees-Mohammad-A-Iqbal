@@ -18,11 +18,9 @@ class Employee:
             return str(self.salary_type) + ' of ' + str(self.hours) + ' hours at ' + str(self.salary) + '/hour'
 
     def get_commission(self):
-        if self.contracts == 0:
-            return str(self.contract_rate)
-        else:
-            return str(self.contract_rate * self.contracts)
-        return ''
+        if self.contracts > 0:
+            return self.contract_rate * self.contracts
+        return self.contract_rate
 
     def get_commission_statement(self):
         if self.contract_rate == 0:
