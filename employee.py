@@ -24,12 +24,11 @@ class Employee:
 
     def get_commission_statement(self):
         if self.contract_rate == 0:
-            return ''
+            return f"{self.get_salary_statement()}"
         elif self.contracts == 0:
-            return f" and recieves a bonus commission of {self.get_commission()}"
+            return f"{self.get_salary_statement()} and recieves a bonus commission of {self.get_commission()}"
         elif self.contracts > 0:
-            return f" and recieves a commission for {self.contracts} contract(s) at {self.contracts}/contract"
-        return ''
+            return f"{self.get_salary_statement()} and recieves a commission for {self.contracts} contract(s) at {self.contract_rate}/contract"
 
     def get_pay(self):
         return (self.base_pay + self.get_commission())
@@ -38,7 +37,7 @@ class Employee:
         return f".  Their total pay is {self.get_pay()}."
          
     def __str__(self):
-        return  f"{self.name} works on a {self.get_salary_statement()}{self.get_commission_statement()}{self.get_pay_statement()}"
+        return  f"{self.name} works on a {self.get_commission_statement()}{self.get_pay_statement()}"
             
             
 
