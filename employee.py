@@ -27,7 +27,7 @@ class Employee:
             return f"{self.get_salary_statement()}"
         elif self.contracts == 0:
             return f"{self.get_salary_statement()} and recieves a bonus commission of {self.get_commission()}"
-        elif self.contracts > 0:
+        else:
             return f"{self.get_salary_statement()} and recieves a commission for {self.contracts} contract(s) at {self.contract_rate}/contract"
 
     def get_pay(self):
