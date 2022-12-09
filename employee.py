@@ -24,11 +24,12 @@ class Employee:
 
     def get_commission_statement(self):
         if self.contract_rate == 0:
-            return 
+            return ''
         elif self.contracts == 0:
             return ' and recieves a bonus commission of ' + str(self.get_commission())
         elif self.contracts > 0:
             return ' and recieves a commission for ' + str(self.contracts) + ' contract(s) at ' + str(self.contracts) + '/contract'
+        return ''
 
     def get_pay(self):
         return self.base_pay + self.get_commission()
