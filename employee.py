@@ -38,8 +38,8 @@ class Employee:
          
     def __str__(self):
         if self.get_commission_statement() == None:
-            return str(self.name) + ' works on a ' + self.get_salary_statement() + '.\n' + self.get_pay_statement()
-        return  str(self.name) + ' works on a ' + self.get_salary_statement() + self.get_commission_statement() + '.\n' + self.get_pay_statement()
+            return str(self.name) + ' works on a ' + str(self.get_salary_statement()) + '.\n' + str(self.get_pay_statement())
+        return  str(self.name) + ' works on a ' + str(self.get_salary_statement()) + str(self.get_commission_statement()) + '.\n' + str(self.get_pay_statement())
             
             
 
