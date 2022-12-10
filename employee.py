@@ -18,7 +18,7 @@ class Employee:
     def get_salary_statement(self):
         if self.salary_type == 'monthly salary':
             return f"{self.salary_type} of {self.base_pay}"
-        else:
+        elif self.salary_type == 'contract':
             return f"{self.salary_type} of {self.hours} hours at {self.salary}/hour"
         return ''
 
@@ -32,7 +32,7 @@ class Employee:
             return f"{self.get_salary_statement()}"
         elif self.contracts == 0:
             return f"{self.get_salary_statement()} and recieves a bonus commission of {self.get_commission()}"
-        else:
+        elif self.contracts > 0:
             return f"{self.get_salary_statement()} and recieves a commission for {self.contracts} contract(s) at {self.contract_rate}/contract"
         return ''
 
